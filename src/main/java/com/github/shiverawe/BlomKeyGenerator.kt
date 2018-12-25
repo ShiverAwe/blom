@@ -29,11 +29,10 @@ class BlomKeyGenerator(
             openKey[i] = BigInteger(length, random).remainder(module)
         }
         val secretKey = Array(size) { BigInteger.ZERO }
-        var buffer: BigInteger
         for (i in secretKey.indices) {
             secretKey[i] = BigInteger.ZERO
             for (j in secretKey.indices) {
-                buffer = secretMatrix[i][j].multiply(openKey[j])
+                val buffer = secretMatrix[i][j].multiply(openKey[j])
                 secretKey[i] = secretKey[i].add(buffer).remainder(module).remainder(module)
             }
         }
