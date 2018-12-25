@@ -14,9 +14,8 @@ class Arc4Connection(key: BigInteger) {
         var j = 0
         for (i in 0..255) {
             j = j + state[i].toInt() + seed[i % seed.size].toInt() and 0xFF
-            state[i] = state[i] xor state[j]
-            state[j] = state[j] xor state[i]
-            state[i] = state[i] xor state[j]
+            // swap
+            state[i] = state[j].also { state[j] = state[i] }
         }
     }
 
