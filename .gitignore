@@ -1,0 +1,12 @@
+# Class files
+out/
+target/
+
+# Gradle files
+.gradle/
+gradle/
+
+# IDEA Files
+.idea/
+*.iml
+*.ipr
