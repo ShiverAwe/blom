@@ -17,7 +17,8 @@ class BlomKeyGenerator(
     private var secretMatrix: Array<Array<BigInteger>>
 
     init {
-        assert(size < 1 || length < 1) { "Invalid arguments!" }
+        assert(size > 0) { "Size should be > 0" }
+        assert(length > 0) { "Length should be > 0" }
         assert(module > BigInteger.ZERO) { "Module should be positive" }
         secretMatrix = Array(size) { Array(size) { BigInteger.ZERO } }
         genSecretMatrix()
