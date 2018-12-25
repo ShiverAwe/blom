@@ -16,7 +16,7 @@ class Client(
      * Calculates key and sets up the connection between clients
      */
     private fun greet(partner: Client, module: BigInteger) {
-        assert(this.secretKey.size == partner.openKey.size) { "Size of connections are not equal" }
+        assert(this.secretKey.size == partner.openKey.size) { "Size of keys are not equal" }
         var sessionKey = BigInteger.ZERO
         for (i in secretKey.indices) {
             val element = secretKey[i].multiply(partner.openKey[i]).remainder(module)
