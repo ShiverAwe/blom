@@ -1,3 +1,8 @@
+Blom's scheme implementation
+https://en.wikipedia.org/wiki/Blom%27s_scheme
+
+Laboratory work for ETU university
+
 ```
 Alice : Sending message : Unknown receiver : Bob : Creating encryption key ...
 Alice : Sending message : Text : Hi bob, it's my first message
