@@ -1,4 +1,4 @@
-Blom's scheme implementation
+# Blom's scheme implementation
 https://en.wikipedia.org/wiki/Blom%27s_scheme
 
 Laboratory work for ETU university
